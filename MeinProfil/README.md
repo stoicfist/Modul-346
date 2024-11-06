@@ -36,3 +36,25 @@ Ich weiss nicht ob **_LATEX_** zu skript sprachen gehört. Aber ich liebe es mit
 Mein Ziel ist es in Zukunft einen Stabiles einkommen zu kriegen.
 Mein wunsch ist es Informatiker und Kung-Fu Meister zu werden. Irgendwann selber eine Kung-Fu schule zu eröffnen und die Menschen zu helfen ihre Wege im Leben zu finden und ein erfülltes Leben führen.
 Ausserdem spende ich mindestens 1 Mal im Jahr Geld für bedürftige Kinder bei [Petite Suisse](https://www.petitesuisse.ch/), da Kinder unsere zukunft sind und jedes Kind verdient glücklich zu sein.
+
+Ich bin ausserdem auch ziemlich Reise freundlich. Hier sind die Orte die ich schon besucht habe.
+
+| Deutschland      | Schweiz | Kroatien       |
+|---------------|----------------|----------------|
+| Baden-Württemberg | Luzern | Pula
+| Bayern | Zürich |
+|Berlin | Basel |
+| Brandenburg | Genf |
+| Bremen | Biel/ Bienne |
+| Hamburg | Tessin |
+| Hessen | Tenero |
+| Mecklenburg-Vorpommern | La Ferrière |
+| Niedersachsen | Mumpf |
+| Nordrhein-Westfalen | Muhen |
+| Rheinland-Pfalz | Aarau |
+| Saarland | Buchs |
+| Sachsen-Anhalt | Rheinfelden |
+| Sachsen | Kaiseraugst |
+| Schleswig-Holstein |Delémont|
+| Thüringen | Laufen |
+|           | Pratteln |
