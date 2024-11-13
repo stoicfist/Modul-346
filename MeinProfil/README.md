@@ -58,3 +58,43 @@ Ich bin ausserdem auch ziemlich Reise freundlich. Hier sind die Orte die ich sch
 | Schleswig-Holstein |Delémont|
 | Thüringen | Laufen |
 |           | Pratteln |
+
+#### Mein Code Block:
+````html
+<pre><code class="language-latex">
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[german]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{makeidx}
+\usepackage{graphicx}
+\usepackage{lmodern}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{graphicx}
+\graphicspath{ {./rahmen/} }
+\author{Stoic Fist}
+\title{\underline{-}}
+\date{\today}
+
+\begin{document}
+\centering
+\maketitle
+
+\vspace{5mm}
+
+Du bist so weit weg, doch bist ganz nah.\\
+Ich in deine Augen einst sah.\\
+Ein Schatten von mir, ganz wunderbar.\\
+Doch wo bist du nur, so unantastbar.\\
+
+\vspace{5mm}
+
+
+
+  																			
+
+\end{document}
+</code></pre>
