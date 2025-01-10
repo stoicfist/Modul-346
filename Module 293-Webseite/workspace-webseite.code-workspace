@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../Modul 346-Cloudlösung/MeinProfil"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Module 293-Webseite"
+	}
+}
