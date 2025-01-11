@@ -1,0 +1,13 @@
+#weather {
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+    margin: 20px auto;
+    border-radius: 10px;
+    text-align: center;
+    width: 80%;
+}
+
+#weather-data {
+    font-size: 1.2em;
+    color: #333;
+}
