@@ -1,20 +1,33 @@
 document.addEventListener("DOMContentLoaded", async function () {
-    const url = "/api/wetter-api?lat=47.3769&lon=8.5417";  // Hole Daten von Azure Function
+    console.log("🟢 wetter.js wird ausgeführt!");
+
+    const url = "/api/wetter-api?lat=47.3769&lon=8.5417";
+    console.log("🌍 API-Request an:", url);
 
     try {
         const response = await fetch(url);
-        if (!response.ok) throw new Error(`API error: ${response.status}`);
+        console.log("📡 API Response Status:", response.status);
+
+        if (!response.ok) {
+            throw new Error(`API Fehler: ${response.status}`);
+        }
 
         const data = await response.json();
+        console.log("📊 API Antwort:", data);
+
+        if (!data || !data.data_weather) {
+            throw new Error("⚠️ Falsches API-Format oder fehlende Daten.");
+        }
+
         const weatherData = data.data_weather;
 
         document.getElementById("weather-data").innerHTML = `
-            <p>🌡 Temperatur: ${weatherData.temperature[0]}°C</p>
-            <p>☁️ Bewölkung: ${weatherData.cloud_cover[0]}%</p>
-            <p>💨 Wind: ${weatherData.wind_speed[0]} km/h</p>
+            <p>🌡 Temperatur: ${weatherData.temperature ? weatherData.temperature[0] : "N/A"}°C</p>
+            <p>☁️ Bewölkung: ${weatherData.cloud_cover ? weatherData.cloud_cover[0] : "N/A"}%</p>
+            <p>💨 Wind: ${weatherData.wind_speed ? weatherData.wind_speed[0] : "N/A"} km/h</p>
         `;
     } catch (error) {
-        document.getElementById("weather-data").innerHTML = `<p>Fehler beim Laden der Wetterdaten.</p>`;
-        console.error("Fehler:", error);
+        document.getElementById("weather-data").innerHTML = `<p>Fehler: ${error.message}</p>`;
+        console.error("❌ Fehler beim Laden der Wetterdaten:", error);
     }
 });
