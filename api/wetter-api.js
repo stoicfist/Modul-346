@@ -1,5 +1,6 @@
 module.exports = async function (context, req) {
     const apiKey = process.env["METEOBLUE_API_KEY"];  // Hole API-Key aus Azure Config
+    console.log("🔑 API Key:", apiKey);
     const lat = req.query.lat || "47.3769";  // Zürich Standardwert
     const lon = req.query.lon || "8.5417";
 
