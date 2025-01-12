@@ -3,16 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aktuelles Wetter</title>
+    <title>Wetterabfrage</title>
     <link rel="stylesheet" href="wetter.css">
 </head>
 <body>
     <div class="weather-container">
-        <h1>🌤 Aktuelles Wetter</h1>
-        <h2 id="location">Standort: Lade...</h2>
+        <h1>🌤 Wettervorhersage</h1>
+        <input type="text" id="city-input" placeholder="Stadt oder Koordinaten (lat,lon)">
+        <button onclick="fetchWeather()">🔍 Suchen</button>
+        <button onclick="getLocation()">📍 Standort nutzen</button>
+        <h2 id="location">Standort: -</h2>
         <div class="weather-info">
             <p><strong>🌡 Temperatur:</strong> <span id="temperature"></span>°C</p>
-            <p><strong>💨 Windgeschwindigkeit:</strong> <span id="wind"></span> m/s</p>
+            <p><strong>💨 Wind:</strong> <span id="wind"></span> m/s</p>
             <p><strong>💧 Luftfeuchtigkeit:</strong> <span id="humidity"></span>%</p>
             <p><strong>🌦 Regenwahrscheinlichkeit:</strong> <span id="rain"></span>%</p>
             <p><strong>🌞 UV-Index:</strong> <span id="uv"></span></p>
