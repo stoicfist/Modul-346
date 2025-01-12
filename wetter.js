@@ -1,15 +1,12 @@
 document.addEventListener("DOMContentLoaded", async function () {
-    const apiKey = "METEOBLUE_API_KEY";
-    const lat = "47.3769";  // Koordinaten für Zürich
-    const lon = "8.5417";
-    const url = `https://my.meteoblue.com/packages/basic-1h?apikey=${apiKey}&lat=${lat}&lon=${lon}&format=json&forecast_days=1`;
+    const url = "/api/wetter-api?lat=47.3769&lon=8.5417";  // Hole Daten von Azure Function
 
     try {
         const response = await fetch(url);
         if (!response.ok) throw new Error(`API error: ${response.status}`);
 
         const data = await response.json();
-        const weatherData = data.data_weather;  // Überprüfe JSON-Struktur der API!
+        const weatherData = data.data_weather;
 
         document.getElementById("weather-data").innerHTML = `
             <p>🌡 Temperatur: ${weatherData.temperature[0]}°C</p>
