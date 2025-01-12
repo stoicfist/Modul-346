@@ -1,3 +1,5 @@
+const fetch = require("node-fetch");
+
 module.exports = async function (context, req) {
     const apiKey = process.env["METEOBLUE_API_KEY"];  // Hole API-Key aus Azure Config
     console.log("🔑 API-Key:", process.env["METEOBLUE_API_KEY"]);
