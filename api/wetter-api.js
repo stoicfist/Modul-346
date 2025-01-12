@@ -1,10 +1,10 @@
-const fetch = require("node-fetch");
+import fetch from "node-fetch";
 
-module.exports = async function (context, req) {
-    const apiKey = process.env["METEOBLUE_API_KEY"];  // Hole API-Key aus Azure Config
-    console.log("🔑 API-Key:", process.env["METEOBLUE_API_KEY"]);
+export default async function (context, req) {
+    const apiKey = process.env["METEOBLUE_API_KEY"];
+    console.log("🔑 API-Key:", apiKey);
 
-    const lat = req.query.lat || "47.3769";  // Zürich Standardwert
+    const lat = req.query.lat || "47.3769";  
     const lon = req.query.lon || "8.5417";
 
     const url = `https://my.meteoblue.com/packages/basic-1h?apikey=${apiKey}&lat=${lat}&lon=${lon}&format=json&forecast_days=1`;
