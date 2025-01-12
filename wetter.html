@@ -3,11 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wetter</title>
-    <script src="wetter.js" defer></script>
+    <title>Aktuelles Wetter</title>
+    <link rel="stylesheet" href="wetter.css">
 </head>
 <body>
-    <h1>Aktuelles Wetter</h1>
-    <div id="weather-output">Wetterdaten werden geladen...</div>
+    <div class="weather-container">
+        <h1>🌤 Aktuelles Wetter</h1>
+        <h2 id="location">Standort: Lade...</h2>
+        <div class="weather-info">
+            <p><strong>🌡 Temperatur:</strong> <span id="temperature"></span>°C</p>
+            <p><strong>💨 Windgeschwindigkeit:</strong> <span id="wind"></span> m/s</p>
+            <p><strong>💧 Luftfeuchtigkeit:</strong> <span id="humidity"></span>%</p>
+            <p><strong>🌦 Regenwahrscheinlichkeit:</strong> <span id="rain"></span>%</p>
+            <p><strong>🌞 UV-Index:</strong> <span id="uv"></span></p>
+            <p><strong>🔍 Wetterzustand:</strong> <span id="weather-icon"></span></p>
+        </div>
+    </div>
+    <script src="wetter.js"></script>
 </body>
 </html>
