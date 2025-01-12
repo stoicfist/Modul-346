@@ -1,33 +1,16 @@
-document.addEventListener("DOMContentLoaded", async function () {
-    console.log("🟢 wetter.js wird ausgeführt!");
+async function getWeather() {
+    const response = await fetch("https://wetter-api-function.azurewebsites.net/api/wetter-api");
+    const data = await response.json();
 
-    const url = "/api/wetter-api?lat=47.3769&lon=8.5417";
-    console.log("🌍 API-Request an:", url);
+    console.log("Wetterdaten:", data); // Debugging in der Konsole
 
-    try {
-        const response = await fetch(url);
-        console.log("📡 API Response Status:", response.status);
+    document.getElementById("weather-output").innerHTML = `
+        <h2>Wetter für ${data.metadata.name || "deine Stadt"}</h2>
+        <p><strong>Temperatur:</strong> ${data.data_1h.temperature[0]}°C</p>
+        <p><strong>Windgeschwindigkeit:</strong> ${data.data_1h.windspeed[0]} m/s</p>
+        <p><strong>Regenwahrscheinlichkeit:</strong> ${data.data_1h.precipitation_probability[0]}%</p>
+    `;
+}
 
-        if (!response.ok) {
-            throw new Error(`API Fehler: ${response.status}`);
-        }
-
-        const data = await response.json();
-        console.log("📊 API Antwort:", data);
-
-        if (!data || !data.data_weather) {
-            throw new Error("⚠️ Falsches API-Format oder fehlende Daten.");
-        }
-
-        const weatherData = data.data_weather;
-
-        document.getElementById("weather-data").innerHTML = `
-            <p>🌡 Temperatur: ${weatherData.temperature ? weatherData.temperature[0] : "N/A"}°C</p>
-            <p>☁️ Bewölkung: ${weatherData.cloud_cover ? weatherData.cloud_cover[0] : "N/A"}%</p>
-            <p>💨 Wind: ${weatherData.wind_speed ? weatherData.wind_speed[0] : "N/A"} km/h</p>
-        `;
-    } catch (error) {
-        document.getElementById("weather-data").innerHTML = `<p>Fehler: ${error.message}</p>`;
-        console.error("❌ Fehler beim Laden der Wetterdaten:", error);
-    }
-});
+// Funktion aufrufen, wenn die Seite geladen wird
+document.addEventListener("DOMContentLoaded", getWeather);
